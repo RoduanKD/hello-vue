@@ -1,28 +1,26 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <v-button message="accept" activeColor="green" link="https://google.com"></v-button>
-    <v-button message="delete" activeColor="red"></v-button>
-    <v-button message="select" activeColor="blue"></v-button>
-    <v-button message="edit" activeColor="yellow"></v-button>
-    <HelloWorld msg="Welcome to our Frontend Course"/>
-    <v-slider images="images" />
+    <v-slider :images="images" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import VButton from './components/VButton.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import VSlider here.
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    VButton
+    // import VSlider here Also.
   },
   data () {
     return {
-      images: []
+      images: [
+        'https://wallpapercave.com/wp/wp3695039.jpg',
+        'https://cdn.shopify.com/s/files/1/0017/0432/9285/files/programming-quotes-for-developers-made4dev-programmer-author.jpg?v=1539287556',
+        'https://talgroupinc.files.wordpress.com/2017/04/programmers_april18.png?w=768'
+      ]
     }
   }
 }
@@ -30,7 +28,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Cairo, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
