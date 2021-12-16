@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <v-slider :images="images" @clear-images="clear" />
+    <v-slider :images="images" @clear-images="clear" @add-image="addImage" />
   </div>
 </template>
 
@@ -29,6 +29,10 @@ export default {
     clear (fathi) {
       console.log(fathi)
       this.images = []
+    },
+
+    addImage (image) {
+      this.images.push(image)
     }
   }
 }

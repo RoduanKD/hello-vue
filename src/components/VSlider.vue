@@ -10,6 +10,9 @@
     <img :src="selectedImage" alt="" width="800">
     <button @click="next">next</button>
     <br>
+    <input type="text" v-model="image">
+    <button @click="add">add</button>
+    <br>
     <button @click="clear">clear</button>
   </div>
 </template>
@@ -25,7 +28,8 @@ export default {
   },
   data () {
     return {
-      selectedIndex: 0
+      selectedIndex: 0,
+      image: ''
     }
   },
   computed: {
@@ -48,6 +52,9 @@ export default {
     clear () {
       // this.images = []
       this.$emit('clear-images', 'this is an argument')
+    },
+    add () {
+      this.$emit('add-image', this.image)
     }
   }
 }
