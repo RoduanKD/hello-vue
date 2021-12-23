@@ -27,6 +27,10 @@
 
       <v-spacer></v-spacer>
 
+      <v-btn text @click="changeLocale">
+        {{ $i18n.locale }}
+      </v-btn>
+
       <v-btn
         :to="{ name: 'About' }"
         text
@@ -58,6 +62,17 @@ export default {
 
   data: () => ({
     //
-  })
+  }),
+
+  methods: {
+    changeLocale () {
+      this.$i18n.locale = this.$i18n.locale === 'ar' ? 'en' : 'ar'
+      this.$vuetify.rtl = this.$i18n.locale === 'ar'
+    }
+  },
+
+  mounted () {
+    this.$vuetify.rtl = true
+  }
 }
 </script>

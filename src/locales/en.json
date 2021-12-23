@@ -1,3 +1,7 @@
 {
-  "message": "Welcome to i18n !!"
+  "message": "Welcome to i18n !!",
+  "hero": {
+    "title": "Welcome to our website",
+    "subtitle": "subtitle"
+  }
 }
